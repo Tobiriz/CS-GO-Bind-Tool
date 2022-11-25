@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS:GO Bind Tool</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="selection1 selection">
+        <label for="selection1" id="label1">Select the kind of bind:</label>
+        <select name="selection1" id="selection1" onchange="changeSelection2(document.getElementById('selection1').value)")>
+            <option value="" selected></option>
+            <option value="listBuying">Buying</option>
+            <option value="listEquipment">Equipment</option>
+            <option value="listMovement">Movement</option>
+            <option value="listSocial">Social</option>
+        </select>
+    </div>
+
+    <div class="selection2 selection">
+        <label for="selection2">Select bind:</label>
+            <select name="selection2" id="selection2" onchange="checkSelection2(document.getElementById('selection2').value)")>
+            </select>
+            <input id="inputField" type="text" label="Text:" disabled>
+    </div>
+    <div>
+        <input type="button" value="Select button" onclick="selectButton()">
+        <input id="buttonField" type="text" value="">
+    </div>
+    <div>
+        <input type="submit" value="Submit" onclick="submit()">
+    </div>
+</body>
+</html>
